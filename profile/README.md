@@ -22,3 +22,7 @@ We help teams ship digital products, put applied AI to work, and modernize the p
 - **Experiment with discipline.** Use small prototypes to test the hardest assumptions early. Carry proven ideas forward into maintainable systems and share what the team learns.
 
 [Website](https://www.rmgx.in/) · [LinkedIn](https://www.linkedin.com/company/rmgx/) · [Instagram](https://www.instagram.com/rmgx_tech/) · [Contact](mailto:contact@rmgx.in)
+
+## Design portfolio
+
+[RMgX Design Studio](https://www.rmgx.design/) · [Dribbble](https://dribbble.com/RMgX) · [Behance](https://www.behance.net/rmgx-studio)
