@@ -1,0 +1,30 @@
+name: Profile CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate organization profile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check profile and logo
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          profile = Path("profile/README.md").read_text(encoding="utf-8")
+          logo = Path("profile/rmgx-icon.png").read_bytes()
+
+          assert "# RMgX Technologies LLP" in profile, "Company heading is missing"
+          assert "profile/rmgx-icon.png" in profile, "Profile logo reference is missing"
+          assert logo.startswith(bytes.fromhex("89504e470d0a1a0a")), "Profile logo is not a PNG"
+          PY

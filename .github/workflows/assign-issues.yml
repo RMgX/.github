@@ -1,0 +1,19 @@
+name: Auto-assign new issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  assign:
+    if: ${{ github.event.issue.assignee == null }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign to the profile maintainer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --add-assignee nishantvarshney
