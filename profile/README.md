@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/RMgX/.github/main/profile/rmgx-icon.png" alt="RMgX logo" width="96" height="96">
+
 # RMgX Technologies LLP
 
 **Scale without complexity.**
